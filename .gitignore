@@ -1,5 +1,8 @@
 __pycache__
-logs/*
-m3u/*
-!logs/.gitkeep
-!m3u/.gitkeep
+app/logs/*
+app/m3u/*
+!app/logs/.gitkeep
+!app/m3u/.gitkeep
+.env
+logs
+media
