@@ -6,3 +6,4 @@ app/m3u/*
 .env
 logs
 media
+.idea
