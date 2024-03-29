@@ -46,16 +46,6 @@ if funct == 'events' or funct == 'all':
     tools.compare_and_update_events(c)
     print('cleaning up temp space')
     cleanup = shutil.rmtree('events/')
-if funct == 'latesttv' or funct == 'all':
-    urltype = 'tvshows'
-    print(wget.download(providerUrl+urltype, ('m3u/apollotvshows.m3u')))
-    apollolist = streamClasses.rawStreamList('m3u/apollotvshows.m3u')
-    os.remove('m3u/apollotvshows.m3u')
-    print('comparing destination ', tvPath)
-    c = filecmp.dircmp(directory+'/tvshows', tvPath)
-    tools.compare_and_update(c)
-    print('cleaning up temp space')
-    cleanup = shutil.rmtree('tvshows/')
 if funct == 'movies' or funct == 'all':
     urltype = 'movies'
     print(wget.download(providerUrl+urltype, ('m3u/iptvmovies.m3u')))
